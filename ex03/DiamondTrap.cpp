@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nechaara <nechaara.student.s19.be>         +#+  +:+       +#+        */
+/*   By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 16:00:00 by nechaara          #+#    #+#             */
-/*   Updated: 2024/10/07 15:16:15 by nechaara         ###   ########.fr       */
+/*   Updated: 2024/10/07 18:48:18 by nechaara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 DiamondTrap::DiamondTrap(void) 
 	: ClapTrap("Veronica_clap_name")
@@ -33,10 +35,9 @@ DiamondTrap::DiamondTrap(std::string name)
 }
 
 
-DiamondTrap::DiamondTrap(const DiamondTrap &copy) :
-	ClapTrap(copy) {
-		outputMessage("Passing trough the copy constructor of DiamondTrap");
-		(*this) = copy;
+DiamondTrap::DiamondTrap(const DiamondTrap &copy) : ClapTrap(copy) {
+	outputMessage("Passing trough the copy constructor of DiamondTrap");
+	(*this) = copy;
 }
 
 DiamondTrap::~DiamondTrap() {

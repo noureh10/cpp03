@@ -6,7 +6,7 @@
 /*   By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:45:25 by nechaara          #+#    #+#             */
-/*   Updated: 2024/08/23 17:18:14 by nechaara         ###   ########.fr       */
+/*   Updated: 2024/10/07 18:55:50 by nechaara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,10 @@ ClapTrap::ClapTrap(void) {
 
 ClapTrap::ClapTrap(std::string name) {
 	outputMessage("Passing trough constructor of ClapTrap");
-	this->_name = name;
-	this->_hit_points = 10;
-	this->_energy_points = 10;
-	this->_attack_points = 0;
-}
-
-ClapTrap::ClapTrap(std::string name, int hit_points, int energy_points, int attack_points) {
-	this->_name = name;
-	this->_hit_points = hit_points;
-	this->_energy_points = energy_points;
-	this->_attack_points = attack_points;
+	this->setName(name);
+	this->setHitPoints(10);
+	this->setEnergyPoints(10);
+	this->setAttackPoints(0);
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy) {
@@ -61,7 +54,8 @@ void ClapTrap::attack(const std::string &target) {
 		std::cout << "The ClapTrap " << this->_name << " can't attack" << std::endl;
 	else
 	{
-		std::cout << "The ClapTrap " << this->_name << " attacks " << target << std::endl;
+		std::cout	<< "The ClapTrap " << this->_name << " attacks " << target
+					<< " and deals " << this->_attack_points << " amount of damage" << std::endl;
 		this->_energy_points--;
 	}
 }
@@ -117,13 +111,16 @@ void ClapTrap::setName(std::string name) {
 }
 
 void ClapTrap::setHitPoints(int amount) {
-	this->_hit_points = amount;
+	if (amount > 0)
+		this->_hit_points = amount;
 }
 
 void ClapTrap::setEnergyPoints(int amount) {
-	this->_energy_points = amount;
+	if (amount > 0)
+		this->_energy_points = amount;
 }
 
 void ClapTrap::setAttackPoints(int amount) {
-	this->_attack_points = amount;
+	if (amount > 0)
+		this->_attack_points = amount;
 }

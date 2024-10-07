@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nechaara <nechaara.student.s19.be>         +#+  +:+       +#+        */
+/*   By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:45:16 by nechaara          #+#    #+#             */
-/*   Updated: 2024/10/07 11:42:48 by nechaara         ###   ########.fr       */
+/*   Updated: 2024/10/07 18:24:31 by nechaara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class ClapTrap {
 		ClapTrap(void);
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap &copy);
-		ClapTrap(std::string name, int hit_points, int energy_points, int attack_points);
 		~ClapTrap();
 		ClapTrap & operator=(const ClapTrap &assign);
 		void attack(const std::string& target);

@@ -6,7 +6,7 @@
 /*   By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:45:25 by nechaara          #+#    #+#             */
-/*   Updated: 2024/08/22 15:57:55 by nechaara         ###   ########.fr       */
+/*   Updated: 2024/10/07 18:20:25 by nechaara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,8 @@ void ClapTrap::attack(const std::string &target) {
 		std::cout << "The ClapTrap " << this->_name << " can't attack" << std::endl;
 	else
 	{
-		std::cout << "The ClapTrap " << this->_name << " attacks " << target << std::endl;
+		std::cout	<< "The ClapTrap " << this->_name << " attacks " << target
+					<< " and deals " << this->_attack_points << " amount of damage" << std::endl;
 		this->_energy_points--;
 	}
 }
@@ -109,13 +110,16 @@ void ClapTrap::setName(std::string name) {
 }
 
 void ClapTrap::setHitPoints(int amount) {
-	this->_hit_points = amount;
+	if (amount > 0)
+		this->_hit_points = amount;
 }
 
 void ClapTrap::setEnergyPoints(int amount) {
-	this->_energy_points = amount;
+	if (amount > 0)
+		this->_energy_points = amount;
 }
 
 void ClapTrap::setAttackPoints(int amount) {
-	this->_attack_points = amount;
+	if (amount > 0)
+		this->_attack_points = amount;
 }

@@ -6,7 +6,7 @@
 /*   By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:45:16 by nechaara          #+#    #+#             */
-/*   Updated: 2024/08/21 16:39:53 by nechaara         ###   ########.fr       */
+/*   Updated: 2024/10/07 17:48:21 by nechaara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ class ClapTrap {
 		void takeDamage(unsigned int ammount);
 		void beRepaired(unsigned int ammount);
 		
-
 		std::string getName(void) const;
 		int getHitPoints(void) const;
 		int getEnergyPoints(void) const;

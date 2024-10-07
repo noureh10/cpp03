@@ -3,27 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nechaara <nechaara.student.s19.be>         +#+  +:+       +#+        */
+/*   By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 15:50:57 by nechaara          #+#    #+#             */
-/*   Updated: 2024/10/07 12:13:02 by nechaara         ###   ########.fr       */
+/*   Updated: 2024/10/07 18:57:26 by nechaara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
 ScavTrap::ScavTrap(void) : ClapTrap("Mark") {
 	outputMessage("Passing through the default constructor of ScavTrap");
-	this->_hit_points = 100;
-	this->_energy_points = 50;
-	this->_attack_points = 20;
+	this->setHitPoints(100);
+	this->setEnergyPoints(50);
+	this->setAttackPoints(20);
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
 	outputMessage("Passing through the constructor of ScavTrap");
-	this->_hit_points = 100;
-	this->_energy_points = 50;
-	this->_attack_points = 20;
+	this->setHitPoints(100);
+	this->setEnergyPoints(50);
+	this->setAttackPoints(20);
 }
 
 ScavTrap::ScavTrap (const ScavTrap  &copy) : ClapTrap(copy) {
@@ -51,7 +52,8 @@ void ScavTrap::attack(const std::string &target) {
 		std::cout << "The ScavTrap " << this->_name << " can't attack" << std::endl;
 	else
 	{
-		std::cout << "The ScavTrap " << this->_name << " attacks " << target << std::endl;
+		std::cout << "The ScavTrap " << this->_name << " attacks " << target
+					<< " and deals " << this->_attack_points << " amount of damage" << std::endl;
 		this->_energy_points--;
 	}
 }

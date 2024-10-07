@@ -3,29 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nechaara <nechaara.student.s19.be>         +#+  +:+       +#+        */
+/*   By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 15:38:17 by nechaara          #+#    #+#             */
-/*   Updated: 2024/10/07 11:40:50 by nechaara         ###   ########.fr       */
+/*   Updated: 2024/10/07 18:55:30 by nechaara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+#include "ClapTrap.hpp"
 
 FragTrap::FragTrap(void) : ClapTrap("Ivy")
 {
 	std::cout << "Default FragTrap constructor called" << std::endl;
-	this->_hit_points = 100;
-	this->_energy_points = 100;
-	this->_attack_points = 30;
+	this->setHitPoints(100);
+	this->setEnergyPoints(100);
+	this->setAttackPoints(30);
 }
 
-FragTrap::FragTrap(std::string name): ClapTrap(name)
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "Parametric FragTrap constructor called for " << this->_name << std::endl;
-	this->_hit_points = 100;
-	this->_energy_points = 100;
-	this->_attack_points = 30;
+	this->setHitPoints(100);
+	this->setEnergyPoints(100);
+	this->setAttackPoints(30);
 }
 
 

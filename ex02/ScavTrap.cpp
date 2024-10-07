@@ -6,7 +6,7 @@
 /*   By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 15:50:57 by nechaara          #+#    #+#             */
-/*   Updated: 2024/08/23 15:12:21 by nechaara         ###   ########.fr       */
+/*   Updated: 2024/10/07 18:22:37 by nechaara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,8 @@ void ScavTrap::attack(const std::string &target) {
 		std::cout << "The ScavTrap " << this->_name << " can't attack" << std::endl;
 	else
 	{
-		std::cout << "The ScavTrap " << this->_name << " attacks " << target << std::endl;
+		std::cout << "The ScavTrap " << this->_name << " attacks " << target
+					<< " and deals " << this->_attack_points << " amount of damage" << std::endl;
 		this->_energy_points--;
 	}
 }
