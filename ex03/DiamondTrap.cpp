@@ -3,44 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nechaara <nechaara.student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 16:00:00 by nechaara          #+#    #+#             */
-/*   Updated: 2024/10/03 14:14:37 by nechaara         ###   ########.fr       */
+/*   Updated: 2024/10/07 15:16:15 by nechaara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap(void) 
-	: ClapTrap("Veronica_clap_name"),
-	FragTrap(),
-	ScavTrap()
+	: ClapTrap("Veronica_clap_name")
 {
 	this->_name = "Veronica";
-	this->_hit_points = FragTrap::_hit_points;
-	this->_energy_points = ScavTrap::_energy_points;
-	this->_attack_points = FragTrap::_attack_points;
+	FragTrap::_hit_points = 100;
+	ScavTrap::_energy_points = 50;
+	FragTrap::_attack_points = 30;
 	outputMessage("DiamondTrap default constructor called");
 }
 
 DiamondTrap::DiamondTrap(std::string name) 
-	: ClapTrap(name + "_clap_name"),
-	FragTrap(),
-	ScavTrap()
+	: ClapTrap(name + "_clap_name")
 {
 	this->_name = name;
-	this->_hit_points = FragTrap::_hit_points;
-	this->_energy_points = ScavTrap::_energy_points;
-	this->_attack_points = FragTrap::_attack_points;
+	FragTrap::_hit_points = 100;
+	ScavTrap::_energy_points = 50;
+	FragTrap::_attack_points = 30;
 	outputMessage("DiamondTrap parameterized constructor called");
 }
 
 
 DiamondTrap::DiamondTrap(const DiamondTrap &copy) :
-	ClapTrap(copy),
-	FragTrap(copy) , 
-	ScavTrap(copy) {
+	ClapTrap(copy) {
 		outputMessage("Passing trough the copy constructor of DiamondTrap");
 		(*this) = copy;
 }

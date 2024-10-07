@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nechaara <nechaara.student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 15:50:51 by nechaara          #+#    #+#             */
-/*   Updated: 2024/08/23 15:54:37 by nechaara         ###   ########.fr       */
+/*   Updated: 2024/10/07 11:34:29 by nechaara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class ScavTrap : virtual public ClapTrap {
 		ScavTrap& operator = (ScavTrap const & assign);
 		void attack(const std::string& target);
 		void guardGate();
+
 };
 
 #endif

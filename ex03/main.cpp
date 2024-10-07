@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nechaara <nechaara.student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:45:51 by nechaara          #+#    #+#             */
-/*   Updated: 2024/08/24 15:36:22 by nechaara         ###   ########.fr       */
+/*   Updated: 2024/10/07 11:42:01 by nechaara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@ int main(void) {
 	DiamondTrap Veronica("V");
 	std::string vilainName = "The Boss";
 
-	 std::cout << "The DiamondTrap name : " << Veronica.getName() << std::endl;
-	 std::cout << "The DiamondTrap HP : " << Veronica.getHitPoints() << std::endl;
-	 std::cout << "The DiamondTrap Energy Points : " << Veronica.getEnergyPoints() << std::endl;
-	 std::cout << "The DiamondTrap Attack Points : " << Veronica.getAttackPoints() << std::endl;
+	std::cout << "The DiamondTrap name : " << Veronica.getName() << std::endl;
+	std::cout << "The DiamondTrap HP : " << Veronica.getHitPoints() << std::endl;
+	std::cout << "The DiamondTrap Energy Points : " << Veronica.getEnergyPoints() << std::endl;
+	std::cout << "The DiamondTrap Attack Points : " << Veronica.getAttackPoints() << std::endl;
 	
-
 	// // can't attack
 	// Veronica.setHitPoints(0);
 	// Veronica.attack(vilainName);

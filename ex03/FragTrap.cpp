@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nechaara <nechaara.student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 15:38:17 by nechaara          #+#    #+#             */
-/*   Updated: 2024/08/25 13:33:52 by nechaara         ###   ########.fr       */
+/*   Updated: 2024/10/07 11:40:50 by nechaara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 FragTrap::FragTrap(void) : ClapTrap("Ivy")
 {
 	std::cout << "Default FragTrap constructor called" << std::endl;
-	this->_hit_points = 101;
-	this->_energy_points = 101;
-	this->_attack_points = 31;
+	this->_hit_points = 100;
+	this->_energy_points = 100;
+	this->_attack_points = 30;
 }
 
 FragTrap::FragTrap(std::string name): ClapTrap(name)
@@ -34,7 +34,6 @@ FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy){
 	(*this) = copy;
 }
 
-
 FragTrap::~FragTrap() {
 	outputMessage("Passing trough the destructor of FlagTrap");
 }
@@ -49,7 +48,6 @@ FragTrap& FragTrap::operator = (FragTrap const & assign) {
 	}
 	return (*this);
 }
-
 
 void FragTrap::highFiveGuys(void) {
 	outputMessage("A really positive high five !");

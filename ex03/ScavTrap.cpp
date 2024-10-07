@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nechaara <nechaara.student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 15:50:57 by nechaara          #+#    #+#             */
-/*   Updated: 2024/08/24 15:35:53 by nechaara         ###   ########.fr       */
+/*   Updated: 2024/10/07 12:13:02 by nechaara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ ScavTrap::ScavTrap(void) : ClapTrap("Mark") {
 	this->_attack_points = 20;
 }
 
-ScavTrap::ScavTrap(std::string name) {
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 	outputMessage("Passing through the constructor of ScavTrap");
-	this->_name = name;
 	this->_hit_points = 100;
 	this->_energy_points = 50;
 	this->_attack_points = 20;
