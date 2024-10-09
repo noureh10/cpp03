@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nechaara <nechaara.student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:45:25 by nechaara          #+#    #+#             */
-/*   Updated: 2024/10/07 18:20:25 by nechaara         ###   ########.fr       */
+/*   Updated: 2024/10/09 16:04:47 by nechaara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap(void) {
 }
 
 ClapTrap::ClapTrap(std::string name) {
-	outputMessage("Passing trough constructor");
+	outputMessage("Passing trough ClapTrap constructor");
 	this->setName(name);
 	this->setHitPoints(10);
 	this->setEnergyPoints(10);
@@ -25,12 +25,12 @@ ClapTrap::ClapTrap(std::string name) {
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy) {
-	outputMessage("Passing through copy constructor");
+	outputMessage("Passing through ClapTrap copy constructor");
 	*this = copy;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap &assign) {
-	outputMessage("Copy assignement operator called");
+	outputMessage("Copy assignement of ClapTrap operator called");
 	if (this != &assign) {
 		this->_name = assign.getName();
 		this->_hit_points = assign.getHitPoints();
@@ -41,7 +41,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &assign) {
 }
 
 ClapTrap::~ClapTrap() {
-	outputMessage("Passing through destructor");
+	outputMessage("Passing through ClapTrap destructor");
 }
 
 void ClapTrap::outputMessage(std::string message) {
