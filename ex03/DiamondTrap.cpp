@@ -18,9 +18,9 @@ DiamondTrap::DiamondTrap(void)
 	: ClapTrap("Veronica_clap_name")
 {
 	this->_name = "Veronica";
-	FragTrap::_hit_points = 100;
-	ScavTrap::_energy_points = 50;
-	FragTrap::_attack_points = 30;
+	FragTrap::setHitPoints(100);
+	ScavTrap::setEnergyPoints(50);
+	FragTrap::setAttackPoints(30);
 	outputMessage("DiamondTrap default constructor called");
 }
 
@@ -28,9 +28,9 @@ DiamondTrap::DiamondTrap(std::string name)
 	: ClapTrap(name + "_clap_name")
 {
 	this->_name = name;
-	FragTrap::_hit_points = 100;
-	ScavTrap::_energy_points = 50;
-	FragTrap::_attack_points = 30;
+	FragTrap::setHitPoints(100);
+	ScavTrap::setEnergyPoints(50);
+	FragTrap::setAttackPoints(30);
 	outputMessage("DiamondTrap parameterized constructor called");
 }
 

@@ -111,16 +111,16 @@ void ClapTrap::setName(std::string name) {
 }
 
 void ClapTrap::setHitPoints(int amount) {
-	if (amount > 0)
+	if (amount >= 0)
 		this->_hit_points = amount;
 }
 
 void ClapTrap::setEnergyPoints(int amount) {
-	if (amount > 0)
+	if (amount >= 0)
 		this->_energy_points = amount;
 }
 
 void ClapTrap::setAttackPoints(int amount) {
-	if (amount > 0)
+	if (amount >= 0)
 		this->_attack_points = amount;
 }
