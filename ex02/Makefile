@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nechaara <nechaara@student.s19.be>         +#+  +:+       +#+         #
+#    By: nechaara <nechaara.student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/21 13:50:04 by nechaara          #+#    #+#              #
-#    Updated: 2024/08/23 16:49:27 by nechaara         ###   ########.fr        #
+#    Updated: 2024/10/09 15:58:10 by nechaara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = FlagTrap
 SRCS = ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:%.cpp=%.o))
 OBJ_DIR = objects
-FLAGS = -std=c++98 -Wall -Wextra -Werror -g3
+FLAGS = -std=c++98 -Wall -Wextra -Werror
 all : $(NAME)
 
 $(NAME) : $(OBJS)
